@@ -107,7 +107,7 @@ export const BRANDS: Brand[] = [
     products: [
         { id: 'p17', name: 'Fisherman Cable Knit', price: '$295', description: 'Heavy gauge wool in cream.', image: 'https://picsum.photos/600/800?random=117' },
         { id: 'p18', name: 'Waxed Cotton Coat', price: '$420', description: 'Water resistant with corduroy collar.', image: 'https://picsum.photos/600/800?random=118' },
-        { id: 'p19', name: 'Merino Scarf', price: '$95', description: 'Extra long knit for layering.', image: 'https://picsum.photos/600/800?random=119' },
+        { id: 'p19', name: 'Merino Scarf', price: '$55', description: 'Extra long knit for layering.', image: 'https://picsum.photos/600/800?random=119' },
     ]
   }
 ];
