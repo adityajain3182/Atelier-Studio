@@ -3,7 +3,7 @@ export interface Product {
   name: string;
   price: string;
   description: string;
-  image: string;
+  images: string[]; // Changed from single image string to array of strings
 }
 
 export interface Brand {
