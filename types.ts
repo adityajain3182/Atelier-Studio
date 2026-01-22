@@ -4,6 +4,8 @@ export interface Product {
   price: string;
   description: string;
   images: string[]; // Changed from single image string to array of strings
+  categories?: string[];
+  link?: string;
 }
 
 export interface Brand {
