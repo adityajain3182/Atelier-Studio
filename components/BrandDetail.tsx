@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Brand } from '../types';
-import { ArrowLeft, Globe, ShoppingBag } from 'lucide-react';
+import { ArrowLeft, Globe, ArrowUpRight } from 'lucide-react';
 
 interface BrandDetailProps {
   brand: Brand;
@@ -13,6 +13,8 @@ const BrandDetail: React.FC<BrandDetailProps> = ({ brand, onBack }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [brand]);
+
+  if (!brand) return null;
 
   return (
     <div className="pt-24 min-h-screen animate-in fade-in duration-500">
@@ -76,50 +78,80 @@ const BrandDetail: React.FC<BrandDetailProps> = ({ brand, onBack }) => {
         <div className="mb-32">
             <div className="flex items-end justify-between mb-12">
                 <h2 className="text-4xl font-bold tracking-tight">Current Collection</h2>
-                <span className="text-studio-gray font-mono text-sm">[ {brand.products.length} Items ]</span>
+                <span className="text-studio-gray font-mono text-sm">[ {brand.products?.length || 0} Items ]</span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-16">
-                {brand.products.map((product) => (
-                    <div key={product.id} className="group cursor-pointer">
-                        <div className="relative aspect-[3/4] bg-gray-100 mb-6 overflow-hidden bg-studio-bg">
-                            {/* Horizontal Scroll Container */}
-                             <div className="flex w-full h-full overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth">
-                                {product.images.map((img, i) => (
-                                    <div key={i} className="min-w-full h-full snap-center relative overflow-hidden">
-                                         <img 
-                                            src={img} 
-                                            alt={`${product.name} - View ${i + 1}`} 
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                            draggable="false"
-                                        />
-                                    </div>
-                                ))}
-                             </div>
+                {brand.products?.map((product) => {
+                    // Defensive check: Ensure product.images is an array
+                    const productImages = Array.isArray(product.images) 
+                        ? product.images 
+                        : (product.images ? [product.images as string] : []);
+                    
+                    // Use product categories if available, otherwise fallback to brand categories or empty
+                    const displayCategories = (product.categories && product.categories.length > 0)
+                        ? product.categories 
+                        : (brand.categories || []);
 
-                            <button className="absolute bottom-0 left-0 right-0 bg-black text-white py-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex items-center justify-center gap-2 font-medium z-10">
-                                <ShoppingBag className="w-4 h-4" />
-                                Purchase — {product.price}
-                            </button>
-                            
-                            {/* Scroll hint indicators */}
-                            {product.images.length > 1 && (
-                                <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                                    {product.images.map((_, i) => (
-                                        <div key={i} className="w-1 h-1 rounded-full bg-white/80"></div>
+                    return (
+                        <div key={product.id} className="group cursor-pointer">
+                            <div className="relative aspect-[3/4] bg-gray-100 mb-6 overflow-hidden bg-studio-bg">
+                                {/* Horizontal Scroll Container */}
+                                <div className="flex w-full h-full overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth">
+                                    {productImages.length > 0 ? (
+                                        productImages.map((img, i) => (
+                                            <div key={i} className="min-w-full h-full snap-center relative overflow-hidden">
+                                                <img 
+                                                    src={img} 
+                                                    alt={`${product.name} - View ${i + 1}`} 
+                                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                                    draggable="false"
+                                                />
+                                            </div>
+                                        ))
+                                    ) : (
+                                        <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400">
+                                            No Image
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* Scroll hint indicators */}
+                                {productImages.length > 1 && (
+                                    <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-1.5 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        {productImages.map((_, i) => (
+                                            <div key={i} className="w-1 h-1 rounded-full bg-white/80"></div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                            <div className="space-y-1">
+                                <h3 className="text-lg font-bold leading-tight">{product.name}</h3>
+                                <div className="flex justify-between items-baseline">
+                                    <p className="text-sm text-studio-gray leading-snug max-w-[80%]">{product.description}</p>
+                                    <span className="text-sm font-mono text-studio-black">{product.price}</span>
+                                </div>
+                                <div className="pt-2 flex flex-wrap gap-2">
+                                    {displayCategories.map(cat => (
+                                        <span key={cat} className="text-[10px] uppercase tracking-widest border border-black/10 px-2 py-1 rounded-full text-studio-gray">
+                                            {cat}
+                                        </span>
                                     ))}
                                 </div>
-                            )}
-                        </div>
-                        <div className="space-y-1">
-                            <h3 className="text-lg font-bold leading-tight">{product.name}</h3>
-                            <div className="flex justify-between items-baseline">
-                                <p className="text-sm text-studio-gray leading-snug max-w-[80%]">{product.description}</p>
-                                <span className="text-sm font-mono text-studio-black">{product.price}</span>
+                                <div className="pt-4">
+                                    <a 
+                                        href={product.link || brand.website}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="inline-flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-studio-black/80 hover:text-studio-black transition-colors hover:gap-2"
+                                    >
+                                        Shop <ArrowUpRight className="w-3 h-3" />
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
         </div>
 
