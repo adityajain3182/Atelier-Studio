@@ -17,21 +17,21 @@ const BrandGrid: React.FC<BrandGridProps> = ({ brands, onSelectBrand }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-24">
         {brands.map((brand, index) => (
-          <div 
-            key={brand.id} 
+          <div
+            key={brand.id}
             className="group cursor-pointer flex flex-col gap-4"
             onClick={() => onSelectBrand(brand)}
           >
             {/* Image Container */}
             <div className="relative overflow-hidden aspect-[4/5] bg-gray-200">
-              <img 
-                src={brand.image} 
+              <img
+                src={brand.image}
                 alt={brand.name}
                 className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-95 group-hover:opacity-100"
               />
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
-              
+
               <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
                 <ArrowUpRight className="w-4 h-4" />
               </div>
@@ -46,7 +46,7 @@ const BrandGrid: React.FC<BrandGridProps> = ({ brands, onSelectBrand }) => {
               <p className="text-base text-studio-black/70 leading-snug max-w-[90%]">
                 {brand.tagline}
               </p>
-              
+
               <div className="pt-2 flex flex-wrap gap-2">
                 {brand.categories.map(cat => (
                     <span key={cat} className="text-[10px] uppercase tracking-widest border border-black/10 px-2 py-1 rounded-full text-studio-gray">

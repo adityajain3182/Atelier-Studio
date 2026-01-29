@@ -10,190 +10,180 @@ export const BRANDS: Brand[] = [
   {
     id: 'marchtee',
     name: 'Marchtee',
-    tagline: 'Essentials redefined.',
+    tagline: 'Built the hard way',
     description: 'Premium cotton basics for the everyday wardrobe.',
     fullDescription: 'Marchtee focuses on the foundational pieces of a wardrobe. By perfecting the cut and fabric of the classic t-shirt, we create essentials that stand the test of time and trends.',
-    established: '2020',
-    origin: 'India',
-    image: '/images/marchtee/p23.jpg', 
-    gallery: ['https://picsum.photos/800/600?random=11', 'https://picsum.photos/800/600?random=12'],
+    established: '2016',
+    origin: 'Pune, India',
+    image: '/images/marchtee/coverPortrait.png',
+    gallery: ['/images/marchtee/coverPortrait.png'],
     website: 'https://marchtee.com',
-    categories: ['Basics', 'Apparel'],
+    categories: ['Basics', 'Cotton Blends'],
     products: [
-      { 
-        id: 'march-p1', 
-        name: 'Signature Tee', 
-        price: '₹999', 
-        description: 'Heavyweight cotton jersey.', 
-        images: ['https://picsum.photos/600/800?random=101', 'https://picsum.photos/600/800?random=101b', 'https://picsum.photos/600/800?random=101c'],
-        categories: ['Top', 'Unisex', 'Cotton']
+      {
+        id: 'march-p1',
+        name: 'Classic Crew Tee',
+        price: '₹1,500',
+        description: 'Supima Cotton, Invisible stitching',
+        images: ['/images/marchtee/p11.png', '/images/marchtee/p12.png', '/images/marchtee/p13.png'],
+        categories: ['100% Cotton', '120gms', 'Tshirt'],
+        link: 'https://www.marchtee.com/tee/men/navy',
       },
-      { 
-        id: 'march-p2', 
-        name: 'Classic Straight Denim', 
-        price: '₹2,499', 
-        description: 'Dark indigo wash with a relaxed straight fit.', 
-        images: [
-            '/images/marchtee/p21.jpg', 
-            '/images/marchtee/p22.jpg', 
-            '/images/marchtee/p23.jpg'
-        ],
-        categories: ['Bottoms', 'Denim', 'Relaxed']
+      {
+        id: 'march-p2',
+        name: 'Classic Wash Denim',
+        price: '₹2,499',
+        description: 'Straight fit, mid-waist, multiple lengths',
+        images: ['/images/marchtee/p21.png', '/images/marchtee/p22.png', '/images/marchtee/p23.png'],
+        categories: ['Bottoms', '99% Cotton 1% Spandex', '690gms'],
+        link: 'https://www.marchtee.com/denims/men/classic-wash',
       },
-    ]
-  },
-  {
-    id: 'made-in-theory',
-    name: 'Made In Theory',
-    tagline: 'Conceptual streetwear.',
-    description: 'Experimental cuts meeting functional design.',
-    fullDescription: 'Made In Theory explores the intersection of art and utility. Each collection is a hypothesis tested through fabric, resulting in garments that challenge standard silhouettes.',
-    established: '2021',
-    origin: 'Mumbai, India',
-    image: 'https://picsum.photos/800/1000?random=2', 
-    gallery: ['https://picsum.photos/800/600?random=21', 'https://picsum.photos/800/600?random=22'],
-    website: 'https://madeintheory.com',
-    categories: ['Streetwear', 'Conceptual'],
-    products: [
-      { 
-        id: 'mit-p1', 
-        name: 'Utility Vest', 
-        price: '₹3,200', 
-        description: 'Multi-pocket tactical layer.', 
-        images: ['https://picsum.photos/600/800?random=201', 'https://picsum.photos/600/800?random=201b', 'https://picsum.photos/600/800?random=201c'],
-        categories: ['Outerwear', 'Tactical', 'Utility']
+      {
+        id: 'march-p3',
+        name: 'Heavy Crew Field Tee',
+        price: '₹890',
+        description: 'Two twist cotton, 80z fabric, chest pocket',
+        images: ['/images/marchtee/p31.png', '/images/marchtee/p32.png', '/images/marchtee/p33.png'],
+        categories: ['Tshirt', '100% Cotton', '220gms'],
+        link: 'https://www.marchtee.com/heavy-field/men/classic-black',
       },
-      { 
-        id: 'mit-p2', 
-        name: 'Cargo Jogger', 
-        price: '₹2,800', 
-        description: 'Tapered fit with strap details.', 
-        images: ['https://picsum.photos/600/800?random=202', 'https://picsum.photos/600/800?random=202b', 'https://picsum.photos/600/800?random=202c'],
-        categories: ['Bottoms', 'Techwear', 'Jogger']
+      {
+        id: 'march-p4',
+        name: 'Suvin Hammo Lite Tee',
+        price: '₹4,900',
+        description: 'Rich suvin blend, Movement design, Oversize cut',
+        images: ['/images/marchtee/p41.png', '/images/marchtee/p42.png', '/images/marchtee/p43.png'],
+        categories: ['Oversized', '85% Suvin Cotton 15% T400', '200gms'],
+        link: 'https://www.marchtee.com/suvin-hammo-lite/men/midnight-navy',
+      },
+      {
+        id: 'march-p5',
+        name: 'Supima Cotton Tank Tee',
+        price: '₹990',
+        description: 'Modern cut, No itchy tags',
+        images: ['/images/marchtee/p51.png', '/images/marchtee/p52.png'],
+        categories: ['Tshirt', '100% Supima Cotton', '110gms'],
+        link: 'https://www.marchtee.com/tank-tee/men/steel',
       },
     ]
   },
   {
     id: 'folkandfab',
     name: 'Folk & Fab',
-    tagline: 'Heritage woven into modernity.',
-    description: 'Traditional textiles adapted for the contemporary soul.',
+    tagline: 'Happiness Made for You',
+    description: 'Stories of culture, art and everyday life.',
     fullDescription: 'Bridging the gap between rural artisans and urban aesthetics, Folk & Fab brings centuries-old weaving techniques into modern cuts and styles.',
-    established: '2019',
-    origin: 'Jaipur, India',
-    image: 'https://picsum.photos/800/1000?random=3', 
+    established: '2023',
+    origin: 'Kerala, India',
+    image: 'https://folkandfab.com/cdn/shop/files/hf_20260121_064509_47acdc12-3168-49c8-856b-c3fbe3a30673.png?v=1768978131&width=3840',
     gallery: ['https://picsum.photos/800/600?random=31', 'https://picsum.photos/800/600?random=32'],
     website: 'https://folkandfab.com',
     categories: ['Sustainable', 'Ethnic'],
     products: [
-      { 
-        id: 'ff-p1', 
-        name: 'Handloom Shirt', 
-        price: '₹1,800', 
-        description: 'Organic cotton, natural dyes.', 
-        images: ['https://picsum.photos/600/800?random=301', 'https://picsum.photos/600/800?random=301b', 'https://picsum.photos/600/800?random=301c'],
-        categories: ['Shirt', 'Organic', 'Handloom']
+      {
+        id: 'ff-p1',
+        name: 'Stone Age Lavender',
+        price: '₹869',
+        description: 'Inspired from carvings by the early humans',
+        images: ['https://folkandfab.com/cdn/shop/files/DSC06921.jpg?v=1762576966&width=533', 'https://folkandfab.com/cdn/shop/files/DSC06937.jpg?v=1762576966&width=1100', 'https://folkandfab.com/cdn/shop/files/DSC06931.jpg?v=1762576967&width=3840'],
+        categories: ['240GSM', 'French terry material', 'Oversized'],
+        link: 'https://folkandfab.com/products/new-stone-age-lavender',
       },
-      { 
-        id: 'ff-p2', 
-        name: 'Block Print Dress', 
-        price: '₹2,400', 
-        description: 'Traditional Bagru print.', 
-        images: ['https://picsum.photos/600/800?random=302', 'https://picsum.photos/600/800?random=302b', 'https://picsum.photos/600/800?random=302c'],
-        categories: ['Dress', 'Printed', 'Artisan']
+      {
+        id: 'ff-p2',
+        name: 'Faces',
+        price: '₹899',
+        description: 'Many persona, moods & emotions of human mind',
+        images: ['https://folkandfab.com/cdn/shop/files/DSC07177_559aec84-3671-4332-9dec-37268c629e03.jpg?v=1762576981&width=2000', 'https://folkandfab.com/cdn/shop/files/DSC06868_6aa852a0-6e88-42b6-ba44-e57891580d04.jpg?v=1762576981&width=3840', 'https://folkandfab.com/cdn/shop/files/DSC07157_eaba4998-90cf-403e-81e1-e91240c01e8c.jpg?v=1762576980&width=3840'],
+        categories: ['240GSM', 'French Terry', 'Oversized'],
+        link: 'https://folkandfab.com/products/faces',
       },
-    ]
-  },
-  {
-    id: 'fourine-enterprise',
-    name: 'Fourine',
-    tagline: 'Industrial design language.',
-    description: 'Structured garments for the creative professional.',
-    fullDescription: 'Fourine Enterprise treats clothing design like industrial architecture. Clean lines, robust materials, and a greyscale palette define our visual identity.',
-    established: '2022',
-    origin: 'India',
-    image: 'https://picsum.photos/800/1000?random=4',
-    gallery: ['https://picsum.photos/800/600?random=41', 'https://picsum.photos/800/600?random=42'],
-    website: 'https://fourine.com',
-    categories: ['Minimalist', 'Workwear'],
-    products: [
-      { 
-        id: 'four-p1', 
-        name: 'Architect Jacket', 
-        price: '₹4,500', 
-        description: 'Structured canvas blend.', 
-        images: ['https://picsum.photos/600/800?random=401', 'https://picsum.photos/600/800?random=401b', 'https://picsum.photos/600/800?random=401c'],
-        categories: ['Inwear', 'Formal', 'Canvas']
+      {
+        id: 'ff-p3',
+        name: 'Boxed Vision',
+        price: '₹899',
+        description: 'Many persona, moods & emotions of human mind',
+        images: ['https://folkandfab.com/cdn/shop/files/IMG_0439.jpg?v=1762576987&width=3840', 'https://folkandfab.com/cdn/shop/files/IMG_0441.jpg?v=1762576986&width=3840', 'https://folkandfab.com/cdn/shop/files/IMG_0444.jpg?v=1762576986&width=3840'],
+        categories: ['240GSM', 'French Terry', 'Boxy'],
+        link: 'https://folkandfab.com/products/boxed-vision-green',
       },
-      { 
-        id: 'four-p2', 
-        name: 'Pleated Trouser', 
-        price: '₹3,200', 
-        description: 'Wide leg formal fit.', 
-        images: ['https://picsum.photos/600/800?random=402', 'https://picsum.photos/600/800?random=402b', 'https://picsum.photos/600/800?random=402c'],
-        categories: ['Bottoms', 'Trousers', 'Formal']
+      {
+        id: 'ff-p4',
+        name: 'Happiness Amplified Sunlit Nimbus',
+        price: '₹1,479',
+        description: 'Human connections & Collective experiences',
+        images: ['https://folkandfab.com/cdn/shop/files/6_17ed2e9d-c645-40a4-bea0-a7e552edbe43.jpg?v=1762576972&width=3840', 'https://folkandfab.com/cdn/shop/files/4_c8ca672a-9eef-4d62-8b10-5422faddd89c.jpg?v=1762576972&width=3840', 'https://folkandfab.com/cdn/shop/files/3_0e2d9a87-a891-4544-a6a6-7cfd14fe070b.jpg?v=1762576972&width=3840'],
+        categories: ['240GSM', 'French Terry', 'Oversized Cropped'],
+        link: 'https://folkandfab.com/products/happiness-amplified-sunlit-nimbus',
       },
-    ]
-  },
-  {
-    id: 'londhegarments',
-    name: 'Londhe Garments',
-    tagline: 'Timeless Indian tailoring.',
-    description: 'Bespoke quality ready-to-wear.',
-    fullDescription: 'Londhe Garments focuses on the art of the fit. With a heritage in tailoring, we bring bespoke-level attention to detail to our ready-to-wear collections.',
-    established: '2018',
-    origin: 'Pune, India',
-    image: 'https://picsum.photos/800/1000?random=5',
-    gallery: ['https://picsum.photos/800/600?random=51', 'https://picsum.photos/800/600?random=52'],
-    website: 'https://londhe.com',
-    categories: ['Tailoring', 'Menswear'],
-    products: [
-      { 
-        id: 'lon-p1', 
-        name: 'Linen Kurta', 
-        price: '₹1,500', 
-        description: 'Breathable summer essential.', 
-        images: ['https://picsum.photos/600/800?random=501', 'https://picsum.photos/600/800?random=501b', 'https://picsum.photos/600/800?random=501c'],
-        categories: ['Ethnic', 'Linen', 'Summer']
-      },
-      { 
-        id: 'lon-p2', 
-        name: 'Nehru Jacket', 
-        price: '₹2,800', 
-        description: 'Textured jute blend.', 
-        images: ['https://picsum.photos/600/800?random=502', 'https://picsum.photos/600/800?random=502b', 'https://picsum.photos/600/800?random=502c'],
-        categories: ['Layering', 'Formal', 'Jute']
+      {
+        id: 'ff-p5',
+        name: 'Apshagun',
+        price: '₹1,390',
+        description: 'Made for the spirited and unfiltered',
+        images: ['https://folkandfab.com/cdn/shop/files/DSC06791.jpg?v=1762576955&width=3840', 'https://folkandfab.com/cdn/shop/files/DSC06785_8a391f55-a8c8-4f0b-9b6f-36370f934ece.jpg?v=1762576955&width=3840', 'https://folkandfab.com/cdn/shop/files/DSC06769.jpg?v=1762576954&width=3840'],
+        categories: ['220GSM', 'French Terry', 'Bio Washed'],
+        link: 'https://folkandfab.com/products/apshagun',
       },
     ]
   },
   {
     id: 'ahankarwear',
     name: 'Ahankar Wear',
-    tagline: 'Pride in self-expression.',
+    tagline: 'Made In Bharat, For The Culture',
     description: 'Bold graphics and statement pieces.',
     fullDescription: 'Ahankar is about owning your identity. Our designs are loud, proud, and unapologetic, drawing inspiration from Indian mythology and modern pop culture.',
     established: '2023',
     origin: 'Delhi, India',
-    image: 'https://picsum.photos/800/1000?random=6',
+    image: '/images/ahankarwear/cover.png',
     gallery: ['https://picsum.photos/800/600?random=61', 'https://picsum.photos/800/600?random=62'],
-    website: 'https://ahankar.com',
-    categories: ['Graphic', 'Streetwear'],
+    website: 'https://ahankarwear.com',
+    categories: ['Culture', 'Streetwear'],
     products: [
-      { 
-        id: 'ahn-p1', 
-        name: 'Mythos Oversized Tee', 
-        price: '₹1,200', 
-        description: 'High density puff print.', 
-        images: ['https://picsum.photos/600/800?random=601', 'https://picsum.photos/600/800?random=601b', 'https://picsum.photos/600/800?random=601c'],
-        categories: ['Tops', 'Graphic', 'Oversized']
+      {
+        id: 'ahn-p1',
+        name: 'Brahma Hoodie',
+        price: '₹2,299',
+        description: 'The Universe with Brahma the creator.',
+        images: ['/images/ahankarwear/p11.png', '/images/ahankarwear/p12.png', '/images/ahankarwear/p13.png'],
+        categories: ['420GSM', 'Terry Cotton', 'Hoodie'],
+        link: 'https://ahankarwear.com/products/brahma-hoodie-preorder',
       },
-      { 
-        id: 'ahn-p2', 
-        name: 'Street Hoodie', 
-        price: '₹2,500', 
-        description: 'Heavyweight fleece.', 
-        images: ['https://picsum.photos/600/800?random=602', 'https://picsum.photos/600/800?random=602b', 'https://picsum.photos/600/800?random=602c'],
-        categories: ['Hoodie', 'Fleece', 'Winter']
+      {
+        id: 'ahn-p2',
+        name: 'Narayan Hoodie',
+        price: '₹2,099',
+        description: 'Inspired by the Hindu deity Lord Vishnu.',
+        images: ['/images/ahankarwear/p21.png', '/images/ahankarwear/p22.png', '/images/ahankarwear/p23.png'],
+        categories: ['420GSM', 'Terry Cotton', 'Hoodie'],
+        link: 'https://ahankarwear.com/products/kalyan-04',
+      },
+      {
+        id: 'ahn-p3',
+        name: 'Kalratri',
+        price: '₹999',
+        description: 'Embodies the shakti of Maa Durga.',
+        images: ['/images/ahankarwear/p31.png', '/images/ahankarwear/p32.png', '/images/ahankarwear/p33.png'],
+        categories: ['240GSM', 'Terry Cotton', 'Tshirt'],
+        link: 'https://ahankarwear.com/products/kalratri-preorder',
+      },
+      {
+        id: 'ahn-p4',
+        name: 'Nazar',
+        price: '₹999',
+        description: 'A shield.',
+        images: ['/images/ahankarwear/p41.png', '/images/ahankarwear/p42.png', '/images/ahankarwear/p43.png'],
+        categories: ['240GSM', 'Terry Cotton', 'Tshirt'],
+        link: 'https://ahankarwear.com/products/nazar',
+      },
+      {
+        id: 'ahn-p5',
+        name: 'Gond',
+        price: '₹999',
+        description: 'The tribal gond art painting.',
+        images: ['/images/ahankarwear/p51.png', '/images/ahankarwear/p52.png', '/images/ahankarwear/p53.png'],
+        categories: ['420GSM', 'Terry Cotton', 'Hoodie'],
+        link: 'https://ahankarwear.com/products/gond-preorder',
       },
     ]
   },
@@ -205,57 +195,55 @@ export const BRANDS: Brand[] = [
     fullDescription: 'Curated for the hype culture, Dripoff provides the perfect apparel to match your grails. Coordinated colors and modern fits.',
     established: '2021',
     origin: 'India',
-    image: 'https://picsum.photos/800/1000?random=7',
+    image: '/images/dripoff/cover.png',
     gallery: ['https://picsum.photos/800/600?random=71', 'https://picsum.photos/800/600?random=72'],
     website: 'https://dripoff.in',
     categories: ['Urban', 'Accessories'],
     products: [
-      { 
-        id: 'drip-p1', 
-        name: 'Coord Set', 
-        price: '₹2,200', 
-        description: 'Matching track set.', 
-        images: ['https://picsum.photos/600/800?random=701', 'https://picsum.photos/600/800?random=701b', 'https://picsum.photos/600/800?random=701c'],
-        categories: ['Set', 'Tracksuit', 'Co-ord']
+      {
+        id: 'drip-p1',
+        name: 'Divine Acid Wash Tank',
+        price: '₹1,650',
+        description: 'Dark Energy.',
+        images: ['/images/dripoff/p11.png', '/images/dripoff/p12.png'],
+        categories: ['Streetwear', '240GSM', 'Rugged'],
+        link: 'https://dripoff.in/products/divine-execution-acid-washed-tank',
       },
-      { 
-        id: 'drip-p2', 
-        name: 'Varsity Jacket', 
-        price: '₹3,500', 
-        description: 'Faux leather sleeves.', 
-        images: ['https://picsum.photos/600/800?random=702', 'https://picsum.photos/600/800?random=702b', 'https://picsum.photos/600/800?random=702c'],
-        categories: ['Outerwear', 'Varsity', 'Faux Leather']
+      {
+        id: 'drip-p2',
+        name: 'Kisses Acid Wash Tank',
+        price: '₹1,650',
+        description: 'Distressed vintage vibe.',
+        images: ['/images/dripoff/p21.png', '/images/dripoff/p22.png'],
+        categories: ['Relaxed', '240GSM', 'Black'],
+        link: 'https://dripoff.in/products/kisses-acid-washed-tank',
       },
-    ]
-  },
-  {
-    id: 'hopeprojectt',
-    name: 'Hope Project',
-    tagline: 'Fashion for a cause.',
-    description: 'Ethical manufacturing supporting local communities.',
-    fullDescription: 'More than a brand, Hope Project is a movement. A percentage of every sale goes towards uplifting underprivileged communities in the textile sector.',
-    established: '2020',
-    origin: 'India',
-    image: 'https://picsum.photos/800/1000?random=8',
-    gallery: ['https://picsum.photos/800/600?random=81', 'https://picsum.photos/800/600?random=82'],
-    website: 'https://hopeproject.in',
-    categories: ['Ethical', 'Casual'],
-    products: [
-      { 
-        id: 'hope-p1', 
-        name: 'Canvas Tote', 
-        price: '₹599', 
-        description: 'Recycled cotton canvas.', 
-        images: ['https://picsum.photos/600/800?random=801', 'https://picsum.photos/600/800?random=801b', 'https://picsum.photos/600/800?random=801c'],
-        categories: ['Accessory', 'Bag', 'Recycled']
+      {
+        id: 'drip-p3',
+        name: 'Retro Casette Tee',
+        price: '₹1,895',
+        description: 'Vintage in a modern wear.',
+        images: ['/images/dripoff/p31.png', '/images/dripoff/p32.png'],
+        categories: ['Reverse wash', '260GSM', 'Black'],
+        link: 'https://dripoff.in/products/retro-cassette-tee-black',
       },
-      { 
-        id: 'hope-p2', 
-        name: 'Basic Tee', 
-        price: '₹799', 
-        description: 'Fair trade organic cotton.', 
-        images: ['https://picsum.photos/600/800?random=802', 'https://picsum.photos/600/800?random=802b', 'https://picsum.photos/600/800?random=802c'],
-        categories: ['Top', 'Organic', 'Fair Trade']
+      {
+        id: 'drip-p4',
+        name: 'Sky Canvas Cuban Shirt',
+        price: '₹1,895',
+        description: 'Breathable Mosk Crepe.',
+        images: ['/images/dripoff/p41.png', '/images/dripoff/p42.png', '/images/dripoff/p43.png'],
+        categories: ['Relax Fit', 'Digital Black Print'],
+        link: 'https://dripoff.in/products/sky-canvas-cuban-shirt',
+      },
+      {
+        id: 'drip-p5',
+        name: 'Shadow City Acid Wash Tee',
+        price: '₹1,695',
+        description: 'Refined urban rebellion.',
+        images: ['/images/dripoff/p51.png', '/images/dripoff/p52.png', '/images/dripoff/p53.png'],
+        categories: ['Oversized', '240GSM', 'Dense Print'],
+        link: 'https://dripoff.in/products/dripoff-shadow-city-acid-wash-tee',
       },
     ]
   },
@@ -267,26 +255,55 @@ export const BRANDS: Brand[] = [
     fullDescription: 'Blurring the lines between workout gear and street style. WTFlex uses technical fabrics that handle sweat while looking sharp enough for a night out.',
     established: '2022',
     origin: 'Bangalore, India',
-    image: 'https://picsum.photos/800/1000?random=9',
+    image: '/images/wtflex/cover.png',
     gallery: ['https://picsum.photos/800/600?random=91', 'https://picsum.photos/800/600?random=92'],
     website: 'https://wtflex.in',
     categories: ['Activewear', 'Sport'],
     products: [
-      { 
-        id: 'wtf-p1', 
-        name: 'Performance Tee', 
-        price: '₹999', 
-        description: 'Quick dry mesh blend.', 
-        images: ['https://picsum.photos/600/800?random=901', 'https://picsum.photos/600/800?random=901b', 'https://picsum.photos/600/800?random=901c'],
-        categories: ['Active', 'Top', 'Quick Dry']
+      {
+        id: 'wtf-p1',
+        name: 'Scripted Essential Cotton Pant',
+        price: '₹1,699',
+        description: 'Clean lines. Bold Attitude.',
+        images: ['/images/wtflex/p11.png', '/images/wtflex/p12.png', '/images/wtflex/p13.png'],
+        categories: ['410GSM', 'Heavyweight', 'Unisex'],
+        link: 'https://wtflex.in/products/scripted-cream-essential-cotton-pants'
       },
-      { 
-        id: 'wtf-p2', 
-        name: 'Compression Shorts', 
-        price: '₹899', 
-        description: '4-way stretch support.', 
-        images: ['https://picsum.photos/600/800?random=902', 'https://picsum.photos/600/800?random=902b', 'https://picsum.photos/600/800?random=902c'],
-        categories: ['Bottoms', 'Compression', 'Gym']
+      {
+        id: 'wtf-p2',
+        name: 'These days striped shirt',
+        price: '₹1,599',
+        description: 'Something you admit.',
+        images: ['/images/wtflex/p21.png', '/images/wtflex/p22.png', '/images/wtflex/p23.png'],
+        categories: ['Comfort Fabric', 'Boxy-fit'],
+        link: 'https://wtflex.in/products/these-days-striped-shirt',
+      },
+      {
+        id: 'wtf-p3',
+        name: 'Bad Land Double Layer Hoodie',
+        price: '₹2,499',
+        description: 'A unique two-layer construction.',
+        images: ['/images/wtflex/p31.png', '/images/wtflex/p32.png', '/images/wtflex/p33.png'],
+        categories: ['300GSM', 'Looper Knit','Boxy-fit'],
+        link: 'https://wtflex.in/products/bad-land-double-layer-hoodie',
+      },
+      {
+        id: 'wtf-p4',
+        name: 'Goat Overnight White Tshirt',
+        price: '₹1,299',
+        description: 'GOATed fr.',
+        images: ['/images/wtflex/p41.png', '/images/wtflex/p42.png', '/images/wtflex/p43.png'],
+        categories: ['280GSM', 'Oversized', 'Puff print'],
+        link: 'https://wtflex.in/products/goat-white-t-shirt',
+      },
+      {
+        id: 'wtf-p5',
+        name: 'Super Saucy Cotton Cap',
+        price: '₹899',
+        description: 'Laid back energy.',
+        images: ['/images/wtflex/p51.png', '/images/wtflex/p52.png', '/images/wtflex/p53.png'],
+        categories: ['Baseball Cap', 'Sweat Resistance'],
+        link: 'https://wtflex.in/products/super-saucy-cotton-cap',
       },
     ]
   },
@@ -303,19 +320,19 @@ export const BRANDS: Brand[] = [
     website: 'https://saltyalpha.com',
     categories: ['Gen-Z', 'Trendy'],
     products: [
-      { 
-        id: 'salt-p1', 
-        name: 'Crop Top', 
-        price: '₹890', 
-        description: 'Ribbed cotton blend.', 
+      {
+        id: 'salt-p1',
+        name: 'Crop Top',
+        price: '₹890',
+        description: 'Ribbed cotton blend.',
         images: ['https://picsum.photos/600/800?random=1003', 'https://picsum.photos/600/800?random=1003b', 'https://picsum.photos/600/800?random=1003c'],
         categories: ['Top', 'Crop', 'Ribbed']
       },
-      { 
-        id: 'salt-p2', 
-        name: 'Wide Denim', 
-        price: '₹2,100', 
-        description: 'Distressed finish.', 
+      {
+        id: 'salt-p2',
+        name: 'Wide Denim',
+        price: '₹2,100',
+        description: 'Distressed finish.',
         images: ['https://picsum.photos/600/800?random=1004', 'https://picsum.photos/600/800?random=1004b', 'https://picsum.photos/600/800?random=1004c'],
         categories: ['Bottoms', 'Denim', 'Wide Leg']
       },
@@ -334,19 +351,19 @@ export const BRANDS: Brand[] = [
     website: 'https://7-10.store',
     categories: ['Footwear', 'Streetwear'],
     products: [
-      { 
-        id: '710-p1', 
-        name: 'Chunky Runner', 
-        price: '₹4,999', 
-        description: 'Mixed material upper.', 
+      {
+        id: '710-p1',
+        name: 'Chunky Runner',
+        price: '₹4,999',
+        description: 'Mixed material upper.',
         images: ['https://picsum.photos/600/800?random=1103', 'https://picsum.photos/600/800?random=1103b', 'https://picsum.photos/600/800?random=1103c'],
         categories: ['Shoes', 'Sneakers', 'Chunky']
       },
-      { 
-        id: '710-p2', 
-        name: 'Logo Socks', 
-        price: '₹399', 
-        description: 'Cotton athletic crew socks.', 
+      {
+        id: '710-p2',
+        name: 'Logo Socks',
+        price: '₹399',
+        description: 'Cotton athletic crew socks.',
         images: ['https://picsum.photos/600/800?random=1104', 'https://picsum.photos/600/800?random=1104b', 'https://picsum.photos/600/800?random=1104c'],
         categories: ['Accessory', 'Socks', 'Cotton']
       },
@@ -365,19 +382,19 @@ export const BRANDS: Brand[] = [
     website: 'https://yousta.com',
     categories: ['Fast Fashion', 'Casual'],
     products: [
-      { 
-        id: 'you-p1', 
-        name: 'Printed Shirt', 
-        price: '₹999', 
-        description: 'Viscose resort fit.', 
+      {
+        id: 'you-p1',
+        name: 'Printed Shirt',
+        price: '₹999',
+        description: 'Viscose resort fit.',
         images: ['https://picsum.photos/600/800?random=1203', 'https://picsum.photos/600/800?random=1203b', 'https://picsum.photos/600/800?random=1203c'],
         categories: ['Top', 'Shirt', 'Print']
       },
-      { 
-        id: 'you-p2', 
-        name: 'Chino Shorts', 
-        price: '₹799', 
-        description: 'Stretch cotton twill.', 
+      {
+        id: 'you-p2',
+        name: 'Chino Shorts',
+        price: '₹799',
+        description: 'Stretch cotton twill.',
         images: ['https://picsum.photos/600/800?random=1204', 'https://picsum.photos/600/800?random=1204b', 'https://picsum.photos/600/800?random=1204c'],
         categories: ['Bottoms', 'Shorts', 'Casual']
       },
@@ -396,19 +413,19 @@ export const BRANDS: Brand[] = [
     website: 'https://copstreet.com',
     categories: ['Resell', 'Luxury'],
     products: [
-      { 
-        id: 'cop-p1', 
-        name: 'Vintage Tee', 
-        price: '₹2,500', 
-        description: 'Washed black oversized.', 
+      {
+        id: 'cop-p1',
+        name: 'Vintage Tee',
+        price: '₹2,500',
+        description: 'Washed black oversized.',
         images: ['https://picsum.photos/600/800?random=1303', 'https://picsum.photos/600/800?random=1303b', 'https://picsum.photos/600/800?random=1303c'],
         categories: ['Top', 'Vintage', 'Tee']
       },
-      { 
-        id: 'cop-p2', 
-        name: 'Grail Hoodie', 
-        price: '₹8,000', 
-        description: 'Heavyweight french terry.', 
+      {
+        id: 'cop-p2',
+        name: 'Grail Hoodie',
+        price: '₹8,000',
+        description: 'Heavyweight french terry.',
         images: ['https://picsum.photos/600/800?random=1304', 'https://picsum.photos/600/800?random=1304b', 'https://picsum.photos/600/800?random=1304c'],
         categories: ['Outerwear', 'Hoodie', 'Hype']
       },
@@ -427,19 +444,19 @@ export const BRANDS: Brand[] = [
     website: 'https://offbeat.com',
     categories: ['Quirky', 'Casual'],
     products: [
-      { 
-        id: 'off-p1', 
-        name: 'Patchwork Jacket', 
-        price: '₹2,800', 
-        description: 'Upcycled fabric scraps.', 
+      {
+        id: 'off-p1',
+        name: 'Patchwork Jacket',
+        price: '₹2,800',
+        description: 'Upcycled fabric scraps.',
         images: ['https://picsum.photos/600/800?random=1403', 'https://picsum.photos/600/800?random=1403b', 'https://picsum.photos/600/800?random=1403c'],
         categories: ['Outerwear', 'Upcycled', 'Jacket']
       },
-      { 
-        id: 'off-p2', 
-        name: 'Funky Socks', 
-        price: '₹299', 
-        description: 'Mismatched patterns.', 
+      {
+        id: 'off-p2',
+        name: 'Funky Socks',
+        price: '₹299',
+        description: 'Mismatched patterns.',
         images: ['https://picsum.photos/600/800?random=1404', 'https://picsum.photos/600/800?random=1404b', 'https://picsum.photos/600/800?random=1404c'],
         categories: ['Accessory', 'Socks', 'Funky']
       },
@@ -458,19 +475,19 @@ export const BRANDS: Brand[] = [
     website: 'https://cava.com',
     categories: ['Athleisure', 'Yoga'],
     products: [
-      { 
-        id: 'cav-p1', 
-        name: 'Sculpt Leggings', 
-        price: '₹1,800', 
-        description: 'High waist compression.', 
+      {
+        id: 'cav-p1',
+        name: 'Sculpt Leggings',
+        price: '₹1,800',
+        description: 'High waist compression.',
         images: ['https://picsum.photos/600/800?random=1503', 'https://picsum.photos/600/800?random=1503b', 'https://picsum.photos/600/800?random=1503c'],
         categories: ['Bottoms', 'Leggings', 'Yoga']
       },
-      { 
-        id: 'cav-p2', 
-        name: 'Sports Bra', 
-        price: '₹1,200', 
-        description: 'Medium impact support.', 
+      {
+        id: 'cav-p2',
+        name: 'Sports Bra',
+        price: '₹1,200',
+        description: 'Medium impact support.',
         images: ['https://picsum.photos/600/800?random=1504', 'https://picsum.photos/600/800?random=1504b', 'https://picsum.photos/600/800?random=1504c'],
         categories: ['Top', 'Bra', 'Support']
       },
@@ -489,19 +506,19 @@ export const BRANDS: Brand[] = [
     website: 'https://taarinianand.com',
     categories: ['Designer', 'Luxury'],
     products: [
-      { 
-        id: 'tar-p1', 
-        name: 'Silk Overlay', 
-        price: '₹5,500', 
-        description: 'Hand embroidered detailing.', 
+      {
+        id: 'tar-p1',
+        name: 'Silk Overlay',
+        price: '₹5,500',
+        description: 'Hand embroidered detailing.',
         images: ['https://picsum.photos/600/800?random=1603', 'https://picsum.photos/600/800?random=1603b', 'https://picsum.photos/600/800?random=1603c'],
         categories: ['Outerwear', 'Silk', 'Embroidered']
       },
-      { 
-        id: 'tar-p2', 
-        name: 'Palazzo Set', 
-        price: '₹4,800', 
-        description: 'Crushed silk fabric.', 
+      {
+        id: 'tar-p2',
+        name: 'Palazzo Set',
+        price: '₹4,800',
+        description: 'Crushed silk fabric.',
         images: ['https://picsum.photos/600/800?random=1604', 'https://picsum.photos/600/800?random=1604b', 'https://picsum.photos/600/800?random=1604c'],
         categories: ['Set', 'Formal', 'Silk']
       },
@@ -520,19 +537,19 @@ export const BRANDS: Brand[] = [
     website: 'https://gullylabs.com',
     categories: ['Streetwear', 'Hype'],
     products: [
-      { 
-        id: 'gul-p1', 
-        name: 'Graphic Hoodie', 
-        price: '₹2,999', 
-        description: 'Oversized drop shoulder.', 
+      {
+        id: 'gul-p1',
+        name: 'Graphic Hoodie',
+        price: '₹2,999',
+        description: 'Oversized drop shoulder.',
         images: ['https://picsum.photos/600/800?random=1703', 'https://picsum.photos/600/800?random=1703b', 'https://picsum.photos/600/800?random=1703c'],
         categories: ['Outerwear', 'Hoodie', 'Oversized']
       },
-      { 
-        id: 'gul-p2', 
-        name: 'Cargo Vest', 
-        price: '₹2,499', 
-        description: 'Utility pockets galore.', 
+      {
+        id: 'gul-p2',
+        name: 'Cargo Vest',
+        price: '₹2,499',
+        description: 'Utility pockets galore.',
         images: ['https://picsum.photos/600/800?random=1704', 'https://picsum.photos/600/800?random=1704b', 'https://picsum.photos/600/800?random=1704c'],
         categories: ['Outerwear', 'Utility', 'Vest']
       },
@@ -551,19 +568,19 @@ export const BRANDS: Brand[] = [
     website: 'https://flexbrat.com',
     categories: ['Punk', 'Street'],
     products: [
-      { 
-        id: 'flx-p1', 
-        name: 'Distressed Tee', 
-        price: '₹999', 
-        description: 'Acid wash finish.', 
+      {
+        id: 'flx-p1',
+        name: 'Distressed Tee',
+        price: '₹999',
+        description: 'Acid wash finish.',
         images: ['https://picsum.photos/600/800?random=1803', 'https://picsum.photos/600/800?random=1803b', 'https://picsum.photos/600/800?random=1803c'],
         categories: ['Top', 'Tee', 'Distressed']
       },
-      { 
-        id: 'flx-p2', 
-        name: 'Biker Jeans', 
-        price: '₹2,500', 
-        description: 'Reinforced knee panels.', 
+      {
+        id: 'flx-p2',
+        name: 'Biker Jeans',
+        price: '₹2,500',
+        description: 'Reinforced knee panels.',
         images: ['https://picsum.photos/600/800?random=1804', 'https://picsum.photos/600/800?random=1804b', 'https://picsum.photos/600/800?random=1804c'],
         categories: ['Bottoms', 'Jeans', 'Biker']
       },
@@ -582,19 +599,19 @@ export const BRANDS: Brand[] = [
     website: 'https://thebearhouse.com',
     categories: ['Menswear', 'Casual'],
     products: [
-      { 
-        id: 'bear-p1', 
-        name: 'Check Flannel', 
-        price: '₹1,800', 
-        description: 'Brushed cotton warmth.', 
+      {
+        id: 'bear-p1',
+        name: 'Check Flannel',
+        price: '₹1,800',
+        description: 'Brushed cotton warmth.',
         images: ['https://picsum.photos/600/800?random=1903', 'https://picsum.photos/600/800?random=1903b', 'https://picsum.photos/600/800?random=1903c'],
         categories: ['Shirt', 'Flannel', 'Winter']
       },
-      { 
-        id: 'bear-p2', 
-        name: 'Linen Shirt', 
-        price: '₹2,100', 
-        description: 'European flax linen.', 
+      {
+        id: 'bear-p2',
+        name: 'Linen Shirt',
+        price: '₹2,100',
+        description: 'European flax linen.',
         images: ['https://picsum.photos/600/800?random=1904', 'https://picsum.photos/600/800?random=1904b', 'https://picsum.photos/600/800?random=1904c'],
         categories: ['Shirt', 'Linen', 'Summer']
       },

@@ -32,20 +32,20 @@ const BrandOverlay: React.FC<BrandOverlayProps> = ({ brand, onClose, onExplore }
   };
 
   return (
-    <div 
+    <div
       className={`fixed inset-0 z-50 flex items-center justify-center transition-all duration-500 ${
         isVisible ? 'bg-black/40 backdrop-blur-md opacity-100' : 'bg-transparent opacity-0 pointer-events-none'
       }`}
       onClick={onClose}
     >
-      <div 
+      <div
         className={`bg-studio-bg w-full h-full md:h-[90vh] md:w-[90vw] md:max-w-6xl md:rounded-xl shadow-2xl overflow-hidden flex flex-col md:flex-row transition-transform duration-500 ease-out ${
           isVisible ? 'translate-y-0 scale-100' : 'translate-y-20 scale-95'
         }`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button Mobile */}
-        <button 
+        <button
           onClick={onClose}
           className="absolute top-4 right-4 z-20 md:hidden bg-white/80 p-2 rounded-full backdrop-blur-sm"
         >
@@ -55,21 +55,15 @@ const BrandOverlay: React.FC<BrandOverlayProps> = ({ brand, onClose, onExplore }
         {/* Left Side: Visuals */}
         <div className="w-full md:w-1/2 h-[40vh] md:h-full bg-gray-100 relative group overflow-hidden">
              {/* Gallery Grid for visual interest */}
-             <div className="grid grid-cols-2 h-full">
+             <div className="grid h-full">
                 <img src={brand.image} alt={brand.name} className="w-full h-full object-cover" />
-                <div className="flex flex-col h-full">
-                    {brand.gallery.slice(0, 2).map((img, i) => (
-                        <img key={i} src={img} alt="Detail" className="w-full h-1/2 object-cover border-b border-white/10 last:border-0" />
-                    ))}
-                </div>
              </div>
-             <div className="absolute inset-0 bg-black/5 pointer-events-none" />
         </div>
 
         {/* Right Side: Content */}
         <div className="w-full md:w-1/2 h-full overflow-y-auto p-8 md:p-16 flex flex-col justify-between relative bg-[#f5f5f7]">
           {/* Close Button Desktop */}
-          <button 
+          <button
             onClick={onClose}
             className="hidden md:flex absolute top-8 right-8 p-2 hover:bg-black/5 rounded-full transition-colors"
           >
@@ -109,16 +103,16 @@ const BrandOverlay: React.FC<BrandOverlayProps> = ({ brand, onClose, onExplore }
           </div>
 
           <div className="mt-12 flex flex-col sm:flex-row gap-4">
-            <button 
+            <button
               onClick={handleExplore}
               className="flex-1 bg-black text-white px-8 py-4 text-center font-medium hover:bg-black/90 transition-colors flex items-center justify-center gap-2 group"
             >
               Explore Collection
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
-            <a 
-              href={brand.website} 
-              target="_blank" 
+            <a
+              href={brand.website}
+              target="_blank"
               rel="noreferrer"
               className="flex-1 border border-black/10 bg-white text-black px-8 py-4 text-center font-medium hover:bg-gray-50 transition-colors flex items-center justify-center gap-2"
             >

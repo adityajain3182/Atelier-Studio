@@ -8,7 +8,7 @@ interface BrandDetailProps {
 }
 
 const BrandDetail: React.FC<BrandDetailProps> = ({ brand, onBack }) => {
-  
+
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -19,9 +19,9 @@ const BrandDetail: React.FC<BrandDetailProps> = ({ brand, onBack }) => {
   return (
     <div className="pt-24 min-h-screen animate-in fade-in duration-500">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
-        
+
         {/* Navigation */}
-        <button 
+        <button
           onClick={onBack}
           className="group flex items-center gap-2 text-sm font-medium text-studio-gray hover:text-studio-black transition-colors mb-8"
         >
@@ -43,7 +43,7 @@ const BrandDetail: React.FC<BrandDetailProps> = ({ brand, onBack }) => {
                 <p className="text-xl md:text-2xl font-medium leading-relaxed text-studio-black/90 mb-8 max-w-xl">
                     {brand.fullDescription}
                 </p>
-                <a 
+                <a
                     href={brand.website}
                     target="_blank"
                     rel="noreferrer"
@@ -52,7 +52,7 @@ const BrandDetail: React.FC<BrandDetailProps> = ({ brand, onBack }) => {
                     Visit Official Website <Globe className="w-4 h-4" />
                 </a>
             </div>
-            
+
             <div className="lg:w-1/2 h-[60vh] lg:h-auto bg-gray-100 overflow-hidden relative">
                 <img src={brand.image} alt={brand.name} className="w-full h-full object-cover" />
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 text-xs font-mono uppercase">
@@ -68,7 +68,7 @@ const BrandDetail: React.FC<BrandDetailProps> = ({ brand, onBack }) => {
             </div>
             <div className="md:col-span-8">
                 <p className="text-lg text-studio-gray leading-relaxed">
-                    "{brand.tagline} We believe in creating garments that serve a purpose beyond mere aesthetics. 
+                    "{brand.tagline} We believe in creating garments that serve a purpose beyond mere aesthetics.
                     Every stitch is intentional, every fabric selected for its tactile quality and longevity."
                 </p>
             </div>
@@ -84,13 +84,13 @@ const BrandDetail: React.FC<BrandDetailProps> = ({ brand, onBack }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-16">
                 {brand.products?.map((product) => {
                     // Defensive check: Ensure product.images is an array
-                    const productImages = Array.isArray(product.images) 
-                        ? product.images 
+                    const productImages = Array.isArray(product.images)
+                        ? product.images
                         : (product.images ? [product.images as string] : []);
-                    
+
                     // Use product categories if available, otherwise fallback to brand categories or empty
                     const displayCategories = (product.categories && product.categories.length > 0)
-                        ? product.categories 
+                        ? product.categories
                         : (brand.categories || []);
 
                     return (
@@ -98,21 +98,17 @@ const BrandDetail: React.FC<BrandDetailProps> = ({ brand, onBack }) => {
                             <div className="relative aspect-[3/4] bg-gray-100 mb-6 overflow-hidden bg-studio-bg">
                                 {/* Horizontal Scroll Container */}
                                 <div className="flex w-full h-full overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth">
-                                    {productImages.length > 0 ? (
+                                    {productImages.length > 0 && (
                                         productImages.map((img, i) => (
                                             <div key={i} className="min-w-full h-full snap-center relative overflow-hidden">
-                                                <img 
-                                                    src={img} 
-                                                    alt={`${product.name} - View ${i + 1}`} 
+                                                <img
+                                                    src={img}
+                                                    alt={`${product.name} - View ${i + 1}`}
                                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                                     draggable="false"
                                                 />
                                             </div>
                                         ))
-                                    ) : (
-                                        <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400">
-                                            No Image
-                                        </div>
                                     )}
                                 </div>
 
@@ -126,7 +122,17 @@ const BrandDetail: React.FC<BrandDetailProps> = ({ brand, onBack }) => {
                                 )}
                             </div>
                             <div className="space-y-1">
-                                <h3 className="text-lg font-bold leading-tight">{product.name}</h3>
+                                <div className="flex justify-between items-baseline">
+                                    <h3 className="text-lg font-bold leading-tight">{product.name}</h3>
+                                    <a
+                                        href={product.link || brand.website}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="group inline-flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-studio-black/80 hover:text-studio-black transition-colors hover:gap-2"
+                                    >
+                                         <ArrowUpRight className="w-3 h-3 group-hover:font-bold" />
+                                    </a>
+                                </div>
                                 <div className="flex justify-between items-baseline">
                                     <p className="text-sm text-studio-gray leading-snug max-w-[80%]">{product.description}</p>
                                     <span className="text-sm font-mono text-studio-black">{product.price}</span>
@@ -139,14 +145,7 @@ const BrandDetail: React.FC<BrandDetailProps> = ({ brand, onBack }) => {
                                     ))}
                                 </div>
                                 <div className="pt-4">
-                                    <a 
-                                        href={product.link || brand.website}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="inline-flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-studio-black/80 hover:text-studio-black transition-colors hover:gap-2"
-                                    >
-                                        Shop <ArrowUpRight className="w-3 h-3" />
-                                    </a>
+
                                 </div>
                             </div>
                         </div>
